@@ -31,10 +31,10 @@ services:
   client:
     build:
       dockerfile: Dockerfile.dev
-      context: ./client
+      context: ./client-react
     volumes:
       - /home/node/reactapp/node_modules
-      - ./client:/home/node/reactapp
+      - ./client-react:/home/node/reactapp
     environment:
       - WDS_SOCKET_PORT=0
   worker:
